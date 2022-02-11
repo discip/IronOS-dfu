@@ -30,7 +30,7 @@ uint8_t oled_init_array[] = {
     0x80, 0xDA, /*Set VCOM Pins hardware config*/
     0x80, 0x02, /*Combination 2*/
     0x80, 0x81, /*Brightness*/
-    0x80, 0x80, /*FF == brightest, 0 == dimmest*/
+    0x80, 0x00, /*FF == brightest, 0 == dimmest*/
     0x80, 0xD9, /*Set pre-charge period*/
     0x80, 0xF1, /*Pre charge period*/
     0x80, 0xDB, /*Adjust VCOMH regulator ouput*/
