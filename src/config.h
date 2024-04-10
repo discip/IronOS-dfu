@@ -11,14 +11,6 @@
 
 // Per device config
 
-#ifdef MODEL_TS100
-#define GPIO_DFU_BOOT_PORT            GPIOA
-#define GPIO_DFU_BOOT_PIN             9
-#define OLED_RESET_Pin                8
-#define OLED_RESET_GPIO_Port          GPIOA
-#define FLASH_BOOTLDR_SIZE_KB         16
-#define FLASH_BOOTLDR_PAYLOAD_SIZE_KB 112
-
 #if defined MODEL_S60 || MODEL_S60P
 #define GPIO_DFU_BOOT_PORT            GPIOB
 #define GPIO_DFU_BOOT_PIN             0
@@ -34,6 +26,14 @@
 #define FLASH_BOOTLDR_PAYLOAD_SIZE_KB 108
 #endif
 #endif
+
+#ifdef MODEL_TS100
+#define GPIO_DFU_BOOT_PORT            GPIOA
+#define GPIO_DFU_BOOT_PIN             9
+#define OLED_RESET_Pin                8
+#define OLED_RESET_GPIO_Port          GPIOA
+#define FLASH_BOOTLDR_SIZE_KB         16
+#define FLASH_BOOTLDR_PAYLOAD_SIZE_KB 112
 
 #elif MODEL_TS80 || MODEL_TS80P
 #define GPIO_DFU_BOOT_PORT            GPIOB
@@ -55,7 +55,9 @@
 #else
 #error model not defined, use model= on makefile path
 #endif
+
 // Common for all models
+
 #define FLASH_SIZE_KB 128
 #define SCL_Pin       6
 #define SCL_GPIO_Port GPIOB
