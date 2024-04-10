@@ -26,7 +26,7 @@ uint8_t oled_init_array[] = {
     0x80, 0xDA,             /*Set VCOM Pins hardware config*/
     0x80, OLED_VCOM_LAYOUT, /*Combination 2 for 16 high; 0x12 for 32 high*/
     0x80, 0x81,             /*Brightness*/
-#ifdef MODEL_S60 || MODEL_S60P
+#if defined MODEL_S60 || MODEL_S60P
     0x80, 0x01,             /*FF == brightest, 1 == dimmest*/
 #else
     0x80, 0x00,             /*FF == brightest, 0 == dimmest*/
