@@ -11,30 +11,30 @@
 
 // Per device config
 
-#ifdef MODEL_TS100
-#define GPIO_DFU_BOOT_PORT            GPIOA
-#define GPIO_DFU_BOOT_PIN             9
-#define OLED_RESET_Pin                8
-#define OLED_RESET_GPIO_Port          GPIOA
-#define FLASH_BOOTLDR_SIZE_KB         16
-#define FLASH_BOOTLDR_PAYLOAD_SIZE_KB 112
-
-#elif MODEL_TS80 || MODEL_TS80P
-#define GPIO_DFU_BOOT_PORT            GPIOB
-#define GPIO_DFU_BOOT_PIN             1
-#define OLED_RESET_Pin                15
-#define OLED_RESET_GPIO_Port          GPIOA
-#define FLASH_BOOTLDR_SIZE_KB         16
-#define FLASH_BOOTLDR_PAYLOAD_SIZE_KB 112
-#define OLED_FLIP
-
-#elif MODEL_MHP30
+#ifdef MODEL_MHP30
 #define GPIO_DFU_BOOT_PORT            GPIOA
 #define GPIO_DFU_BOOT_PIN             10
 #define OLED_RESET_Pin                4
 #define OLED_RESET_GPIO_Port          GPIOB
 #define FLASH_BOOTLDR_SIZE_KB         32
 #define FLASH_BOOTLDR_PAYLOAD_SIZE_KB 96
+
+#elif defined MODEL_TS100 || MODEL_TS80 || MODEL_TS80P
+#define OLED_RESET_GPIO_Port          GPIOA
+#define FLASH_BOOTLDR_SIZE_KB         16
+#define FLASH_BOOTLDR_PAYLOAD_SIZE_KB 112
+
+#ifdef MODEL_TS100
+#define GPIO_DFU_BOOT_PORT            GPIOA
+#define GPIO_DFU_BOOT_PIN             9
+#define OLED_RESET_Pin                8
+
+#elif MODEL_TS80 || MODEL_TS80P
+#define GPIO_DFU_BOOT_PORT            GPIOB
+#define GPIO_DFU_BOOT_PIN             1
+#define OLED_RESET_Pin                15
+#define OLED_FLIP
+#endif
 
 #elif defined MODEL_S60 || MODEL_S60P
 #define GPIO_DFU_BOOT_PORT            GPIOB
