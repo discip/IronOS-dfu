@@ -18,7 +18,7 @@
 #define GPIO_DP_PULLUP_PIN            8
 #endif
 
-#if MODEL_S60
+#ifdef MODEL_S60
 #define FLASH_BOOTLDR_SIZE_KB         17
 #define FLASH_BOOTLDR_PAYLOAD_SIZE_KB 111
 
