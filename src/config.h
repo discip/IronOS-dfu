@@ -16,6 +16,7 @@
 #define GPIO_DFU_BOOT_PIN             0
 #define GPIO_DP_PULLUP_PORT           GPIOA
 #define GPIO_DP_PULLUP_PIN            8
+#endif
 
 #if MODEL_S60
 #define FLASH_BOOTLDR_SIZE_KB         17
@@ -24,7 +25,6 @@
 #elif MODEL_S60P
 #define FLASH_BOOTLDR_SIZE_KB         20
 #define FLASH_BOOTLDR_PAYLOAD_SIZE_KB 108
-#endif
 #endif
 
 #ifdef MODEL_TS100
