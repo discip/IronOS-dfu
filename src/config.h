@@ -47,7 +47,7 @@
 #define FLASH_BOOTLDR_SIZE_KB         19
 #define FLASH_BOOTLDR_PAYLOAD_SIZE_KB 109
 
-#elif MODEL_TS80 || MODEL_TS80P
+#elif MODEL_TS80P
 #define GPIO_DFU_BOOT_PORT            GPIOB
 #define GPIO_DFU_BOOT_PIN             1
 #define OLED_RESET_Pin                15
@@ -55,8 +55,18 @@
 #define FLASH_SIZE_KB                 128
 #define FLASH_BOOTLDR_SIZE_KB         16
 #define FLASH_BOOTLDR_PAYLOAD_SIZE_KB 112
-#define OLED_FLIP
-
+#define OLED_INVERT_SCAN
+#define OLED_FLIP_BUFFER
+#elif MODEL_TS80
+#define GPIO_DFU_BOOT_PORT            GPIOB
+#define GPIO_DFU_BOOT_PIN             1
+#define OLED_RESET_Pin                15
+#define OLED_RESET_GPIO_Port          GPIOA
+#define FLASH_SIZE_KB                 128
+#define FLASH_BOOTLDR_SIZE_KB         16
+#define FLASH_BOOTLDR_PAYLOAD_SIZE_KB 112
+#define OLED_INVERT_SCAN
+#define OLED_FLIP_BUFFER
 #elif MODEL_MHP30
 #define GPIO_DFU_BOOT_PORT            GPIOA
 #define GPIO_DFU_BOOT_PIN             10
